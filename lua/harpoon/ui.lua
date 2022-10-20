@@ -168,6 +168,7 @@ function M.nav_file(id)
     log.trace("nav_file(): Navigating to", id)
     local idx = Marked.get_index_of(id)
     if not Marked.valid_index(idx) then
+        Marked.add_file()
         log.debug("nav_file(): No mark exists for id", id)
         return
     end
